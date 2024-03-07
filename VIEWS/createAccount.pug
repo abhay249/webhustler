@@ -1,0 +1,27 @@
+extends base
+
+block content 
+  main.main
+    if user
+      .login-form
+        h2.heading-secondary.ma-bt-lg Sign UP 
+        form.account-create.form.form--login
+          .form__group
+            label.form__label(for='name') Your Name
+            input#name.form__input(type='text', placeholder='abc def', required)
+          .form__group
+            label.form__label(for='email') Email address
+            input#email.form__input(type='email', placeholder='you@example.com', required)
+          .form__group.ma-bt-md
+            label.form__label(for='password') Password
+            input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+          .form__group.ma-bt-md
+            label.form__label(for='password') Confirm Password
+            input#confirmPassword.form__input(type='password', placeholder='••••••••', required, minlength='8')
+          .form__group
+            button.btn.btn--green Sign Up
+    else 
+      h2.login-first Please Login first 😔
+      
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+  

@@ -1,0 +1,19 @@
+extends base
+
+block content
+  main.main
+    .login-form 
+      h5.heading-secondary.ma-bt-lg Log into your account
+      form.form-login.form--login.admin-login
+        .form__group
+          label.form__label.name(for='email') Enter your email
+          input#email.name1.form__input(type='email', placeholder='abcd', required)
+        .form__group.ma-bt-md
+          label.form__label.cou(for='password') Enter your password
+          input#password.course.form__input(type='text', placeholder='••••••••', required)
+        .form__group
+          button.btn.btn--green.but Submit
+  //- script(src='/js/click.js')
+  //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+//-   script(src='/js/admin.js') 
+  //- script(src="/js/bundle.js") 

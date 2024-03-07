@@ -1,0 +1,2 @@
+{"level":"info","message":"inside get index page","service":"user-service","timestamp":"2024-03-06T11:38:47.461Z"}
+{"level":"info","message":"outside get index page","service":"user-service","timestamp":"2024-03-06T11:38:50.449Z"}

@@ -1,0 +1,131 @@
+doctype html 
+html 
+  head  
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel="stylesheet", href="/css/admin.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    link(rel="shortcut icon", href="/img/logo2.png", type="image/x-icon")
+    title #{title}
+    
+
+  body 
+    if user 
+      nav.nav 
+        img.nav__logo__dashboard.img-fluid(src="/img/webh.png", alt="logo image",designer="abhay" , data-version-number="3.0" )
+        .user-icon.name-user
+          i.fa-regular.fa-user
+          h5.user-name= `${user.name}`
+    else 
+      nav.nav 
+        img.nav__logo.img-fluid(src="/img/webh.png", alt="logo image",designer="abhay" , data-version-number="3.0" )
+        .user-icon.login-icon
+          i.fa-regular.fa-user 
+          a.user-name(href="/admin") Login 
+        //- .user-img
+
+    if user
+      .dashboard__content
+        .admin-tool 
+          h3 ADMIN TOOL
+          .tools.users-btn
+            i.fa-solid.fa-users
+            h5 Users 
+          .tools.services-btn
+            i.fa-regular.fa-paper-plane
+            h5 Services
+          .tools.contact-btn
+            i.fa-regular.fa-address-book
+            h5 Contact
+          .tools
+            i.fa-regular.fa-flag
+            h5 Report
+          .tools 
+            i.fa-solid.fa-gear
+            h5 Settings
+          .tools.logout
+            i.fa-solid.fa-arrow-right-from-bracket
+            h5 Logout
+
+        main.main
+            .welcome  
+              h1.heading-span Users
+              button.btn.btn--green.but.addServiceBtn Add Service 
+              button.btn.btn--green.but.createAccBtn Create Account 
+              //- if userDataSet
+              .dash-content
+                .column-span 
+                  span.name-span-head Name
+                .column-span 
+                  span.name-span-head.span-type Email 
+                .column-span 
+                  span.name-span-head.status-col Status
+                .column-span 
+                  span.name-span-head Action
+              //- .loading 
+                i.fa.fa-circle-o-notch.fa-spin
+                h1.load-text Loading
+              .user-text-container.service-container.contact-container
+                if userDataSet
+                  each data in userDataSet 
+                    .dash-content.user-text.service-text.contact-text
+                      .column-span
+                        span.name-span= data.name
+                      .column-span
+                        span.name-span= data.email
+                      if data.active == true
+                        .column-span
+                          span.name-span Active 
+                      else
+                        .column-span
+                          span.name-span Inactive 
+                      .column-span
+                        button.btn--blue(id=`${data._id}` ) Delete
+                        //- span.name-span action
+                if serviceDataSet
+                  each dataSet in serviceDataSet 
+                    .dash-content.service-text
+                      .column-span
+                        span.name-span= dataSet.name
+                      .column-span
+                        span.name-span= dataSet.type 
+                      if dataSet.active == true
+                        .column-span
+                          span.name-span Active 
+                      else
+                        .column-span
+                          span.name-span Inactive 
+                      .column-span
+                        button.btn--blue Delete
+                        //- span.name-span action
+            
+            //- each service in serve 
+            //-   h2= service.type
+    else 
+      main.main
+        h2.login-first Please Login first 😔
+
+    include _footer
+
+    //- .login-form
+    //-   h5.heading-secondary.ma-bt-lg Admin Dashboard
+    //-   form.form-login.form--login
+    script(src="/js/click.js") 
+    script(src="/js/bundle.js") 
+    //- script(src="/js/login.js" type="module") 
+    //- script(src="/js/createAccount.js" type="module") 
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+    //- script(src="/js/index.js") 
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+    script(src="https://kit.fontawesome.com/21aa754e66.js" , crossorigin="anonymous") 
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js") 
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js") 
+      
+        //- .form__group
+        //-   button.btn.btn--green.but Submit
+  //- script(src='/js/login.js' type='module')
+  //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+//-   script(src='/js/admin.js') 
+  //- script(src="/js/bundle.js") 

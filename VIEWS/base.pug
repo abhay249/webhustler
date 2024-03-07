@@ -1,0 +1,54 @@
+doctype html 
+html 
+  head  
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="/css/icon-font.css")
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel="stylesheet", href="/css/admin.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    link(rel="shortcut icon", href="/img/logo2.png", type="image/x-icon")
+    title #{title}
+    
+
+  body 
+    //-  HEADER 
+    include _header
+    //- nav.nav 
+    //-   img.nav__logo.img-fluid(src="/img/webh.png", alt="logo image",designer="abhay" , data-version-number="3.0" )
+    //-   ul.nav__links 
+    //-     li.nav__item
+    //-       a.nav__link(href="home") HOME
+    //-     li.nav__item
+    //-       a.nav__link(href="/about.pug") ABOUT
+    //-     li.nav__item
+    //-       a.nav__link(href="ourServices") OUR SERVICES
+    //-     li.nav__item
+    //-       a.nav__link(href="contact") CONTACT
+
+    //-   .sidenav#mySidenav
+    //-     a.closebtn#closebtn(href="javascript:void(0)") &times;
+    //-     a(href="home") HOME 
+    //-     a(href="aboutUs") ABOUT US 
+    //-     a(href="ourServices") OUR SERVICES 
+    //-     a(href="contactUs") CONTACT US  
+    //-   span.slide_nav_bar#slide_nav_bar(style="font-size: 30px; cursor: pointer") &#9776;  
+
+    //- Body Content
+    block content 
+
+    //- FOOTEr
+    include _footer
+
+    //- script(src="/js/bundle.js") 
+      script(src="/js/click.js") 
+    script(src="/js/bundle.js") 
+    //- script(src="/js/click.js" type="module") 
+    //- script(src="/js/login.js" type="module") 
+    //- script(src="/js/createAccount.js" type="module") 
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+    //- script(src="/js/index.js") 
+    script(src="https://kit.fontawesome.com/21aa754e66.js" , crossorigin="anonymous") 
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js") 
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js") 

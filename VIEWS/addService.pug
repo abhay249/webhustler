@@ -1,0 +1,62 @@
+extends base
+
+block content 
+  main.main
+    if user 
+      .login-form
+        h5.heading-secondary.ma-bt-lg Create New Service 
+        form.form-signUp.form--login.add-service
+          .form__group
+            label.form__label.name(for='name') Name
+            input#name.form__input(type='text', placeholder='Name', required)
+          .form__group
+            label.form__label.name(for='slug') Slug
+            input#slug.form__input(type='text', placeholder='/web-design', required)
+          .form__group
+            label.form__label.name(for='type') Type
+            select#propertyType.form__input(name='dropdown')
+              option(value='branding') Branding
+              option(value='design') Design
+              option(value='marketing') Marketing
+          .form__group
+            label.form__label.name(for='content1') Content1
+            input#content1.form__input(type='text', placeholder="Content", required)
+          .form__group
+            label.form__label.name(for='content2') Content2
+            input#content2.form__input(type='text', placeholder='Content', required)
+          .form__group.ma-bt-md
+            label.form__label.cou(for='content3') Content3
+            input#content3.form__input(type='text', placeholder='Content', required)
+          .form__group.ma-bt-md
+            label.form__label.cou(for='conrtent4') Conrtent4
+            input#content4.form__input(type='alpha-numeric', placeholder='Content', required)
+          .form__group.ma-bt-md
+            label.form__label.cou(for='image1') Image1
+            input#image1.image1(type="file" name="files[]" onchange="imageUploaded1()")
+          .form__group.ma-bt-md
+            label.form__label.cou(for='image2') Image2
+            input#image2.image2(type="file" name="files[]" onchange="imageUploaded2()")
+          .form__group
+            button.btn.btn--green.but Submit
+    else 
+      h2.login-first Please Login first 😔
+
+  script(src="/js/image.js") 
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+    
+  //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+  //- script(src="/js/account.js" type='module') 
+//-   script(src="/js/video.js" type='module') 
+//-   script(src="/js/bundle.js") 
+  
+
+//-   doctype html 
+//- html 
+//-   head  
+//-     meta(charset='UTF-8')
+//-     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-     link(rel='stylesheet' href='/css/check.css')
+//-     title Create Account 
+    
+
+//-   body 

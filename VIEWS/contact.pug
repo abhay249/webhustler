@@ -1,0 +1,21 @@
+extends base
+
+block content
+  main.main
+    .login-form.contact-form
+      h5.heading-secondary.ma-bt-lg Contact Us
+      form.form-signUp.form--login.contact-us
+        .form__group
+          label.form__label.name(for='name') Name
+          input#name.form__input(type='text', placeholder='Name', required)
+        .form__group
+          label.form__label(for='email') Email
+          input#email.form__input(type='email', placeholder='you@example.com', required)
+        .form__group
+          label.form__label.name(for='phone') Phone Number
+          input#phone.form__input(type='tel', pattern="[0-9]{10}", placeholder="1234567890", required)
+        .form__group
+          label.form__label.name(for='message') Message
+          input#message.form__input(type='text', placeholder='Content', required)
+        .form__group
+          button.btn.btn--green.but Submit

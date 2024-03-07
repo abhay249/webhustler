@@ -1,0 +1,21 @@
+nav.nav 
+  a.nav__logo(href="/")
+    img.nav__logo.img-fluid(src="/img/webh.png", alt="logo image",designer="abhay" , data-version-number="3.0" )
+  ul.nav__links 
+    li.nav__itemo
+      a.nav__link(href="/") HOME
+    li.nav__item
+      a.nav__link(href="/admin") ABOUT
+    li.nav__item
+      a.nav__link(href="/admin") OUR SERVICES
+    li.nav__item
+      a.nav__link(href="/contact") CONTACT
+      //- a.nav__el(href='/login') Log in
+
+  .sidenav#mySidenav
+    a(href="/") HOME 
+    a(href="/admin") ABOUT US 
+    a.closebtn#closebtn(href="javascript:void(0)") &times;
+    a(href="/admin") OUR SERVICES 
+    a(href="/admin") CONTACT US  
+  span.slide_nav_bar#slide_nav_bar(style="font-size: 30px; cursor: pointer") &#9776;  
