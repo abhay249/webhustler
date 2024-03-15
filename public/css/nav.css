@@ -1,0 +1,27 @@
+.toggle-btn {
+  cursor: pointer;
+}
+.options {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.services__li__item {
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+}
+.services__li {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 15px;
+  /* width: 70px; */
+}
+.toggle-btn {
+  padding-right: -20px;
+}
+.services__name {
+  cursor: pointer;
+  /* margin-top: 20px; */
+  display: flex;
+}
