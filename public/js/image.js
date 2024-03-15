@@ -26,18 +26,18 @@ function imageUploaded1() {
   reader1.readAsDataURL(file1);
 }
 
-function imageUploaded2() {
-  var file2 = document.querySelector('.image2')['files'][0];
+// function imageUploaded2() {
+//   var file2 = document.querySelector('.image2')['files'][0];
 
-  var reader2 = new FileReader();
+//   var reader2 = new FileReader();
 
-  reader2.onload = function () {
-    base64String2 = reader2.result;
+//   reader2.onload = function () {
+//     base64String2 = reader2.result;
 
-    imageBase64Stringsep2 = base64String2;
-  };
-  reader2.readAsDataURL(file2);
-}
+//     imageBase64Stringsep2 = base64String2;
+//   };
+//   reader2.readAsDataURL(file2);
+// }
 
 if (createServiceBtn)
   createServiceBtn.addEventListener('submit', (e) => {
@@ -49,10 +49,10 @@ if (createServiceBtn)
     const type = document.getElementById('propertyType').value;
     const content1 = document.getElementById('content1').value;
     const content2 = document.getElementById('content2').value;
-    const content3 = document.getElementById('content3').value;
-    const content4 = document.getElementById('content4').value;
+    // const content3 = document.getElementById('content3').value;
+    // const content4 = document.getElementById('content4').value;
     const image1 = base64String1;
-    const image2 = base64String2;
+    // const image2 = base64String2;
     // const idCard = document.getElementById('idCard').value;
     // const state = document.getElementById('state').value;
     // const district = document.getElementById('district').value;
@@ -70,20 +70,20 @@ if (createServiceBtn)
       type,
       content1,
       content2,
-      content3,
-      content4,
-      image1,
-      image2
+      // content3,
+      // content4,
+      image1
+      // image2
     );
     document.getElementById('name').value = '';
     document.getElementById('slug').value = '';
     document.getElementById('propertyType').value = '';
     document.getElementById('content1').value = '';
     document.getElementById('content2').value = '';
-    document.getElementById('content3').value = '';
-    document.getElementById('content4').value = '';
+    // document.getElementById('content3').value = '';
+    // document.getElementById('content4').value = '';
     document.getElementById('image1').value = '';
-    document.getElementById('image2').value = '';
+    // document.getElementById('image2').value = '';
   });
 
 const addService = async (
@@ -92,10 +92,10 @@ const addService = async (
   type,
   content1,
   content2,
-  content3,
-  content4,
-  image1,
-  image2
+  // content3,
+  // content4,
+  image1
+  // image2
 ) => {
   console.log(image1);
   try {
@@ -108,10 +108,10 @@ const addService = async (
         type,
         content1,
         content2,
-        content3,
-        content4,
+        // content3,
+        // content4,
         image1,
-        image2,
+        // image2,
       },
     });
     // console.log(res.data.data.user.city, res.data.status);

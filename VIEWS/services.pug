@@ -4,8 +4,31 @@ block content
   main.service__main 
     .service__heading= `${data.name}`
   section.content__section 
-    p.content Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolore fugiat odio veniam necessitatibus error sequi nihil libero accusantium laudantium fugit corporis omnis laboriosam vero in numquam quibusdam, doloremque rem.
-    p.content Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab non labore, cumque odit tempora ad necessitatibus illo ipsam odio impedit harum perferendis commodi eveniet doloribus sunt vel error, temporibus vitae.
+    p.content= `${data.content1}`
+    p.content= `${data.content2}`
   section.service__img 
-    img.img-fluid.service-img(src="/img/web15.jpg", alt="", style ="max-width:100%;height:auto;")
+    img.img-fluid.service-img(src=`${data.image1}`, alt="", style ="max-width:100%;height:auto;")
+  
+  section.section-book.section
+    .row-row 
+      .book 
+        .book__form 
+          form.form-signUp.form--login.contact-us
+            .u-margin-bottom-medium
+              h2.heading-secondary We are listening
+            .form__group
+              label.form__label.name(for='name') Name
+              input#name.form__input(type='text', placeholder='Name', required)
+            .form__group
+              label.form__label(for='email') Email
+              input#email.form__input(type='email', placeholder='you@example.com', required)
+            .form__group
+              label.form__label.name(for='phone') Phone Number
+              input#phone.form__input(type='tel', pattern="[0-9]{10}", placeholder="1234567890", required)
+            .form__group
+              label.form__label.name(for='message') Message
+              input#message.form__input(type='text', placeholder='Content', required)
+            .form__group
+              button.btn.btn--green.but Submit
+
     //- img.img-fluid.service-img(src="/img/web15.jpg", alt="", srcset="")

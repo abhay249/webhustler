@@ -9,6 +9,11 @@ const loginForm = document.querySelector('.admin-login');
 const logOut = document.querySelector('.logout');
 const contact_us = document.querySelector('.contact-us');
 // const logOut = document.querySelector('.logout');
+const about_section = document.querySelector('.section-about');
+const service_section = document.querySelector('.section-features');
+const about_click = document.querySelector('.about_click');
+const services_click = document.querySelector('.services_click');
+
 const userBtn = document.querySelector('.users-btn');
 const serviceBtn = document.querySelector('.services-btn');
 const contact_btn = document.querySelector('.contact-btn');
@@ -232,3 +237,15 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+// smooth scrolling
+if (about_click)
+  about_click.addEventListener('click', function (e) {
+    console.log(about_section.getBoundingClientRect());
+    about_section.scrollIntoView({ behavior: 'smooth' });
+  });
+if (services_click)
+  services_click.addEventListener('click', function (e) {
+    console.log(service_section.getBoundingClientRect());
+    service_section.scrollIntoView({ behavior: 'smooth' });
+  });

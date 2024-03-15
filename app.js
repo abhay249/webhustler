@@ -71,7 +71,7 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 
-app.use(express.json({ limit: '500kB', parameterLimit: 50000 }));
+app.use(express.json({ limit: '800kB', parameterLimit: 50000 }));
 
 app.use(
   express.urlencoded({

@@ -57,7 +57,7 @@ export const login = async (email, password) => {
     let m3 = err.response.data.split(' ')[6];
     let m4 = err.response.data.split(' ')[7];
     let m5 = err.response.data.split(' ')[8];
-
+    console.log(err.response.data);
     let message = m1 + ' ' + m2 + ' ' + m3 + ' ' + m4 + ' ' + m5;
     showAlert('error', message);
   }

@@ -15,10 +15,10 @@ const servicesSchema = new mongoose.Schema({
     type: String,
     required: [true, 'image1 is required'],
   },
-  image2: {
-    type: String,
-    required: [true, 'image2 is required'],
-  },
+  // image2: {
+  //   type: String,
+  //   required: [true, 'image2 is required'],
+  // },
   content1: {
     type: String,
     required: [true, 'content1 is required'],
@@ -27,14 +27,14 @@ const servicesSchema = new mongoose.Schema({
     type: String,
     required: [true, 'content2 is required'],
   },
-  content3: {
-    type: String,
-    required: [true, 'content3 is required'],
-  },
-  content4: {
-    type: String,
-    required: [true, 'content4 is required'],
-  },
+  // content3: {
+  //   type: String,
+  //   required: [true, 'content3 is required'],
+  // },
+  // content4: {
+  //   type: String,
+  //   required: [true, 'content4 is required'],
+  // },
   active: {
     type: Boolean,
     default: true,

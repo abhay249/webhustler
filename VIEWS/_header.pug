@@ -5,17 +5,95 @@ nav.nav
     li.nav__itemo
       a.nav__link(href="/") HOME
     li.nav__item
-      a.nav__link(href="/admin") ABOUT
+      .nav__link.about_click ABOUT
     li.nav__item
-      a.nav__link(href="/admin") OUR SERVICES
+      .nav__link.services_click OUR SERVICES
     li.nav__item
       a.nav__link(href="/contact") CONTACT
       //- a.nav__el(href='/login') Log in
 
   .sidenav#mySidenav
-    a(href="/") HOME 
-    a(href="/admin") ABOUT US 
+    ul.services__ul
+      li.services__li#branding
+        span.services__name.branding.button-toggle-btn(onclick="toggleOptions('branding')") BRANDING
+          //- .button-toggle-btn(onclick="toggleOptions('branding')") +
+        ul.options#options-branding
+          a(href="/service/web-development") 
+            li.services__li__item WEB DEVELOPMENT
+          a(href="/service/app-development") 
+            li.services__li__item APP DEVELOPMENT
+          a(href="/service/crm-solution") 
+            li.services__li__item CRM SOLUTION
+          a(href="/service/e-commerce") 
+            li.services__li__item E-COMMERCE
+
+      li.services__li#cloud
+        span.services__name.cloud.button-toggle-btn(onclick="toggleOptions('cloud')") CLOUD
+          //- .button-toggle-btn(onclick="toggleOptions('cloud')") +
+        ul.options#options-cloud
+          a(href="/service/domain") 
+            li.services__li__item DOMAIN
+          a(href="/service/hosting") 
+            li.services__li__item HOSTING
+          a(href="/service/crm") 
+            li.services__li__item CRM
+          a(href="/service/email-solution") 
+            li.services__li__item EMAIL SOLUTION
+        
+      li.services__li#marketing
+        span.services__name.marketing.button-toggle-btn(onclick="toggleOptions('marketing')") MARKETING
+          //- .button-toggle-btn(onclick="toggleOptions('marketing')") +
+        ul.options#options-marketing
+          a(href="/service/seo") 
+            li.services__li__item SEO
+          a(href="/service/smo") 
+            li.services__li__item SMO 
+          a(href="/service/content-marketing") 
+            li.services__li__item CONTENT MARKETING
+          a(href="/service/pay-per-click") 
+            li.services__li__item PAY PER CLICK
+      
+      li.services__li#design
+        span.services__name.design.button-toggle-btn(onclick="toggleOptions('design')") DESIGN
+          //- .button-toggle-btn(onclick="toggleOptions('design')") +
+        ul.options#options-design
+          a(href="/service/web-design") 
+            li.services__li__item WEB DESIGN
+          a(href="/service/logo-design") 
+            li.services__li__item LOGO DESIGN
+          a(href="/service/packaging-design") 
+            li.services__li__item PACKAGING DESIGN
+          a(href="/service/digital-design") 
+            li.services__li__item DIGITAL DESIGN
+
     a.closebtn#closebtn(href="javascript:void(0)") &times;
-    a(href="/admin") OUR SERVICES 
-    a(href="/admin") CONTACT US  
+    a.contact_anchor(href="/contact") CONTACT US  
   span.slide_nav_bar#slide_nav_bar(style="font-size: 30px; cursor: pointer") &#9776;  
+
+
+script.
+  function toggleOptions(id) {
+    var optionsList = document.getElementById("options-" + id);
+    var toggleButton = document.querySelector("#" + id + " .button-toggle-btn");
+
+    // Hide other options
+    var allOptions = document.querySelectorAll('.options');
+    allOptions.forEach(function(option) {
+      if (option.id !== "options-" + id) {
+        option.style.maxHeight = null;
+        var otherToggleButton = document.querySelector("#" + option.id.replace('options-', '') + " .button-toggle-btn");
+        //- otherToggleButton.textContent = "+";
+        otherToggleButton.style.color = '#777';
+      }
+    });
+
+    if (optionsList.style.maxHeight) {
+      optionsList.style.maxHeight = null;
+      //- toggleButton.textContent = "+";
+      toggleButton.style.color = '#777';
+    } else {
+      optionsList.style.maxHeight = optionsList.scrollHeight + "px";
+      toggleButton.style.color = '#f1f1f1';
+      //- toggleButton.textContent = "-";
+    }
+  }

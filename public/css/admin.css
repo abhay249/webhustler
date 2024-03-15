@@ -1,11 +1,14 @@
-.main {
-  background-color: #f7f7f7;
-  padding: 8rem 6rem;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
+@media only screen and (min-width: 1080px) {
+  .main {
+    background-color: #f7f7f7;
+    padding: 8rem 6rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+  }
 }
+
 .ma-bt-lg {
   font-size: 22px;
   font-weight: 500;
@@ -153,7 +156,16 @@
 .main {
   background-color: #f7f7f7;
 }
-
+@media only screen and (max-width: 1080px) {
+  .main {
+    background-color: #f7f7f7;
+    padding-top: 8rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+  }
+}
 .login-form {
   -webkit-box-flex: 1;
   -ms-flex: 1;

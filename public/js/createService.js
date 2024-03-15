@@ -19,10 +19,10 @@ export const addService = async (
   type,
   content1,
   content2,
-  content3,
-  content4,
+  // content3,
+  // content4,
   image1,
-  image2
+  // image2
 ) => {
   // console.log(idCard, dateOfBirth);
   try {
@@ -35,10 +35,10 @@ export const addService = async (
         type,
         content1,
         content2,
-        content3,
-        content4,
+        // content3,
+        // content4,
         image1,
-        image2,
+        // image2,
       },
     });
     // console.log(res.data.data.user.city, res.data.status);
